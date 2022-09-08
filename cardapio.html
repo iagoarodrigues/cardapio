@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+ <head lang="pt-br">
+  <meta charset="utf-8">
+  <title>Cardápios</title>
+
+  <style type="text/css">
+   *{
+    margin: 0;
+    padding: 0 0 0 10px;
+   }
+   body{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
+background: rgb(76,76,76); /* Old browsers */
+background: -moz-linear-gradient(top,  rgb(76,76,76) 0%, rgb(89,89,89) 12%, rgb(102,102,102) 25%, rgb(71,71,71) 39%, rgb(44,44,44) 50%, rgb(0,0,0) 51%, rgb(17,17,17) 60%, rgb(43,43,43) 76%, rgb(28,28,28) 91%, rgb(19,19,19) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgb(76,76,76) 0%,rgb(89,89,89) 12%,rgb(102,102,102) 25%,rgb(71,71,71) 39%,rgb(44,44,44) 50%,rgb(0,0,0) 51%,rgb(17,17,17) 60%,rgb(43,43,43) 76%,rgb(28,28,28) 91%,rgb(19,19,19) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgb(76,76,76) 0%,rgb(89,89,89) 12%,rgb(102,102,102) 25%,rgb(71,71,71) 39%,rgb(44,44,44) 50%,rgb(0,0,0) 51%,rgb(17,17,17) 60%,rgb(43,43,43) 76%,rgb(28,28,28) 91%,rgb(19,19,19) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+
+   }
+   ul{
+    width: 880px;
+    list-style:none;
+    display: flex;
+    margin: 100px auto;
+   }
+
+   .min{
+    width: 200px;
+    display: block;
+   }
+
+   .lbox{
+    visibility: hidden;
+    opacity: 0;
+   }
+
+   .lbox:target{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: rgba(10,10,10,0.7);
+    position:fixed;
+   }
+
+   .box_img {
+    width: 1000px;
+    margin: 0px auto;
+   }
+
+   .btn{
+    color: #fff;
+    font-family: 'Arial';
+    text-decoration: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+   }
+
+   #prev {
+    left: 5%;
+    top: 45%;
+   }
+
+   #next {
+    right: 5%;
+    top: 45%;
+   }
+
+   #close {
+    right: 2%;
+    top: 0;
+   }
+
+   .box_img img{
+    opacity: 0;
+   }
+
+   .lbox:target .box_img img{
+    width: 400px;
+    margin-left: 300px;
+    margin-top: 10px;
+    opacity: 1;
+    transition: opacity .4s linear;
+   }
+
+  </style>
+ </head>
+ <body>
+
+  <ul>
+   <li><a href="#img1"><img src="imagens/cardapio1.png" class="min"></a></li>
+   <li><a href="#img2"><img src="imagens/cardapio2.png" class="min"></a></li>
+   <li><a href="#img3"><img src="imagens/cardapio3.png" class="min"></a></li>
+   <li><a href="#img4"><img src="imagens/cardapio4.png" class="min"></a></li>
+  </ul>
+
+  <div class="lbox" id="img1">
+   <div class="box_img">
+    <a href="#img4" class="btn" id="prev">&#171;</a>
+    <a href="" class="btn" id="close">X</a>
+    <img src="imagens/cardapio1.png">
+    <a href="#img2" class="btn" id="next">&#187;</a>
+   </div>
+  </div>
+
+  <div class="lbox" id="img2">
+   <div class="box_img">
+    <a href="#img1" class="btn" id="prev">&#171;</a>
+    <a href="" class="btn" id="close">X</a>
+    <img src="imagens/cardapio2.png">
+    <a href="#img3" class="btn" id="next">&#187;</a>
+   </div>
+  </div>
+
+  <div class="lbox" id="img3">
+   <div class="box_img">
+    <a href="#img2" class="btn" id="prev">&#171;</a>
+    <a href="" class="btn" id="close">X</a>
+    <img src="imagens/cardapio3.png">
+    <a href="#img4" class="btn" id="next">&#187;</a>
+   </div>
+  </div>
+
+  <div class="lbox" id="img4">
+   <div class="box_img">
+    <a href="#img3" class="btn" id="prev">&#171;</a>
+    <a href="" class="btn" id="close">X</a>
+    <img src="imagens/cardapio4.png">
+    <a href="#img1" class="btn" id="next">&#187;</a>
+   </div>
+  </div>
+ </body>
+</html>
